@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.01rem;
+}
+
+:root{
+    --title-color: #000000;
+}
+
+.container{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+a, .link{
+    color: blue;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.link{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.left-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-nav{
+    margin-bottom: 100px;
+}
+
+.info{
+    padding: 30px 30px;
+    height: 100vh;
+    overflow: scroll;
+    position: relative;
+}
+
+.animated-arrow{
+    position: fixed;
+    color: blue;
+    bottom: 3%;
+    right: 50%;
+    font-size: 1.5rem;
+    animation: arrowUpDown 1s infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes arrowUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.name{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.contact a{
+    color: black;
+}
+
+.section-tite{ 
+    margin-bottom: 10px;
+    margin-top: 40px;
+    color: var(--title-color);
+    /* text-transform: uppercase; */
+    /* font-style: italic; */
+    color: blue;
+}
+
+.text, .event-description{
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+.year-container{
+    display: flex;
+    gap: 50px;
+}
+
+.event-container{
+    margin-bottom: 30px;
+}
+
+.event-title{
+    margin-bottom: 5px;
+    color: blue;
+}
+
+.year-title{
+    font-size: 1rem;
+    color: blue;
+}
+
+/* project styling starts here */
+
+/* Container and Grid Layout */
+.projects-wrapper {
+    padding: 30px 30px;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  .projects-container {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    position: relative; /* Make it a reference point for absolutely positioned elements */
+  }
+  
+  /* Project Styling */
+  .project {
+    position: absolute; 
+    aspect-ratio: 0.8;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; 
+  }
+  
+  /* Image Styling */
+  .project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+/* Modal overlay styling */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+  }
+  
+  .custom-modal {
+    background: #fff;
+    padding: 30px;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Close button styling */
+  .close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;    
+  }
+  
+
+.wetrospective{
+    position: fixed;
+    width: 200px;
+    height: 250px;
+    background-color: rgb(213, 213, 213);
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    animation: tiltRightTiltLeft 1000ms infinite forwards;
+    background-image: url("./assets/images//wetro_book_cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid magenta;
+    cursor: pointer;
+}
+
+
+.dragMe{
+    margin-top: -20px;
+    background-color: magenta;
+    color: white;
+    transform: all 500ms ease;
+}
+
+
+
+.wetrospective:hover .dragMe{
+    opacity: 0;
+}
+/* Animations */
+
+@keyframes glitter-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes tiltRightTiltLeft{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .info, .projects-wrapper{
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .projects-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .animated-arrow{
+        display: none;
+    }
+}
