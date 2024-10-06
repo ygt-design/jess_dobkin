@@ -292,12 +292,78 @@ $(document).ready(function () {
       imgSrc: ["./assets/images/emergency/emergency_one.jpeg"],
     },
     "./assets/images/attending/attending_one.jpeg": {
-      title: "Emergency Exits",
+      title: "Attending",
       description:
         "Jess is stationed as a ‘full-service’ washroom attendant inside women’s public washrooms, on duty to attend to the needs of women using the facilities. Patrons can ring for service, which might include pussy wiping, tampon insertion, or provision of reading material. Additional services and supplies are oﬀered at the attend-ant’s cart including towels, lotions, hair products, and breath mints. Presented at Hysteria: A Festival of Women, Toronto; The Kitchen, New York City; Art Toronto (formerly known as The Toronto International Art Fair).",
       imgSrc: [
         "./assets/images/attending/attending_one.jpeg",
         "./assets/images/attending/attending_two.jpeg",
+      ],
+    },
+    "./assets/images/composite/composite_one.jpeg": {
+      title: "Composite Body",
+      description:
+        "A modiﬁed dry-erase board is used in a process of creating a self-con-structed body. The artist draws, erases, edits, and re-draws, moving through a spectrum of emotions as she considers the lines and contours of her imagined physique.",
+      imgSrc: ["./assets/images/composite/composite_one.jpeg"],
+    },
+    "./assets/images/ontario/ontario_one.jpeg": {
+      title: "An Ontario Bride Seeks American Wives",
+      description:
+        "Soon after Jess moves from New York to Toronto, the province of Ontario legalizes same-sex marriage. In response to this historic legislation, Jess returns to New York to exercise her newly acquired rights, marrying countless people, pets, ﬁre hydrants, and street signs. She conducts more than 50 ceremonies, with accompa-nying vows, music, confetti, rings, and signed marriage certiﬁcates stating the terms of nuptials — including that, ‘if we bump into each other in a movie ticket line, and one of us is way up near the front of the line, we will allow the other person to sneak into the line right next to us, because that’s what married people do for each other’. ",
+      imgSrc: ["./assets/images/ontario/ontario_one.jpeg"],
+    },
+    "./assets/images/sixDegrees/sixDegrees_one.jpg": {
+      title: "An Ontario Bride Seeks American Wives",
+      description:
+        "A meditation on the inescapable web of lesbian community, this one-woman puppet work humour-ously maps our interconnected lives.",
+      extraInfo: "Image credit: Sandra Smith",
+      imgSrc: ["./assets/images/ontario/ontario_one.jpeg"],
+    },
+    "./assets/images/twoBoobs/twoBoobs_one.jpeg": {
+      title: "The Two Boobs",
+      description:
+        "With strings tied around nipples and faces painted on breasts, the two boobs become puppets, negotiating the complexities of their relationship in a silent movie-inspired puppet show.",
+      extraInfo: "Image credit: Sandra Smith",
+      imgSrc: ["./assets/images/twoBoobs/twoBoobs_one.jpeg"],
+    },
+    "./assets/images/waistUp/waistUp_one.jpg": {
+      title: "From the Waist Up and Down",
+      description:
+        "One-hour of performance shena-nigans at The Rhubarb Festival, Toronto. Curated by Naomi Campbell and performed with Samantha Blanchette, Laura Kim, Simla Civelek, Arun, and Scott White on piano.",
+      extraInfo: "Photo Credit: Vivain Babuts",
+      imgSrc: ["./assets/images/waistUp/waistUp_one.jpg"],
+    },
+    "./assets/images/talk/talk_one.jpeg": {
+      title: "Talk to Me",
+      description:
+        "A performance satirizing the use of cell phones in public spaces and the inﬁltration of modern technology in urban culture. Toting a giant hot pink papier-mâché cell phone, Jess chatters, gossips, and rants her way through New York City. For one presentation at The Kitchen Street Festival, Jess performs as a repre-sentative of a ﬁctitious service provider, oﬀering satirical service contracts and cardboard phones.",
+      extraInfo: "Photo Credit: Vivain Babuts",
+      imgSrc: ["./assets/images/talk/talk_one.jpeg"],
+    },
+    "./assets/images/oneNight/oneNight_one.jpeg": {
+      title: "One Night Only",
+      description:
+        "An exploration of desire and fantasy in the sticky heat of a New York City summer. Performed with Vivian Babuts, Kelly Dolak, Dionne Herbert, Saira, Wazhmah Osman, and Christie White 28 July 2000 at Dixon Place.",
+      extraInfo: "Photo Credit: Vivain Babuts",
+      imgSrc: [
+        "./assets/images/oneNight/oneNight_one.jpeg",
+        "./assets/images/oneNight/oneNight_two.jpeg",
+      ],
+    },
+    "./assets/images/mad/mad_one.jpeg": {
+      title: "The Mad Chef",
+      description:
+        "As The Mad Chef (2000–2003), the artist challenges the conﬁnes of role and identity, breaking through internal boundaries in discovery of uncharted territories. Live and video installments have been presented at numerous venues. At the Jack Tilton Gallery in New York, audiences are invited to paint with coloured cake frosting, replicating historical masterpieces and sugar-coating arranged still lives. Cakes become canvases, to be critiqued and then eaten.",
+      imgSrc: ["./assets/images/mad/mad_one.jpeg"],
+    },
+    "./assets/images/utopia/utopia_one.jpeg": {
+      title: "Utopia Roaming",
+      description:
+        "Performances and workshops touring to universities, theatres, and community centres in the US and Canada (1998–2001) that explore issues of lesbian identity and community, and encourage audiences to name their dreams and desires as a ﬁrst step towards realizing them. The initial tour, performed with Eric Cho and Jayne Weber, and supported by the Astraea Foundation and the Franklin Furnace Fund for Performance Art, travelled to sixteen cities in 1998.",
+      extraInfo: "Photo Credit: Vivian Babuts",
+      imgSrc: [
+        "./assets/images/utopia/utopia_one.jpeg",
+        "./assets/images/utopia/utopia_two.jpeg",
       ],
     },
   };
