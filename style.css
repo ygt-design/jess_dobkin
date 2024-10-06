@@ -31,9 +31,24 @@ a, .link{
     text-underline-offset: 3px;
 }
 
+a:hover, .link:hover{
+    color: magenta;
+    text-decoration-color: magenta;
+}
+
 .link{
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.credits{
+    text-align: right;
+    width: 100%;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    cursor: pointer;
 }
 
 .left-nav{
@@ -52,12 +67,57 @@ a, .link{
     position: relative;
 }
 
+.loading-overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999999999;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: blue;
+    animation: opacityDrop 500ms forwards;
+}
+
+.loading-hand{
+    display: none;
+    animation: spin 1s infinite;
+}
+
+@keyframes opacityDrop{
+    0%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    95%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .animated-arrow{
     position: fixed;
     color: blue;
     bottom: 3%;
     right: 50%;
-    font-size: 1.5rem;
+    font-size: 3rem;
     animation: arrowUpDown 1s infinite;
     transition: all 0.3s ease;
 }
@@ -78,6 +138,53 @@ a, .link{
     margin-bottom: 20px;
     text-transform: uppercase;
     font-size: 1rem;
+    animation: nameTiltRightLeft 5000ms infinite forwards;
+    color: white;
+    border: 1px solid magenta;  
+    border-radius: 100px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: magenta;
+    position: fixed;
+    z-index: 999;
+}
+
+.name:hover{
+    background-color: white;
+    color: magenta;
+}
+
+.make-is-now{
+    background-color: magenta;
+    padding: 2px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    border: 1px solid magenta;
+}
+
+.make-is-now:hover{
+    background-color: white;
+    color: magenta;
+    text-decoration-color: magenta;
+}
+
+@keyframes nameTiltRightLeft{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(5deg);
+    }
+    15%{
+        transform: rotate(-5deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 .contact a{
@@ -150,7 +257,6 @@ a, .link{
   }
 
   
-/* Modal overlay styling */
 .custom-modal-overlay {
     position: fixed;
     top: 0;
@@ -167,9 +273,12 @@ a, .link{
   .custom-modal {
     background: #fff;
     padding: 30px;
+    width: 90vw;
     max-width: 600px;
     position: relative;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: scroll;
   }
   
   /* Close button styling */
@@ -179,10 +288,27 @@ a, .link{
     right: 15px;
     font-size: 24px;
     cursor: pointer;    
+    color: magenta;
+    border: 2px solid magenta;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 100px;
+    font-weight: normal;
   }
   
+  .modal-image{
+/* center the images */
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 80%;
+    height: auto;
+  }
 
 .wetrospective{
+    display: none;
     position: fixed;
     width: 200px;
     height: 250px;
