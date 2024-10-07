@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll("img");
 
   images.forEach((image) => {
-    // Create a canvas and convert the image to a Blob object
     const convertDataURLToBlob = (dataURL) => {
       const byteString = atob(dataURL.split(",")[1]);
       const mimeString = dataURL.split(",")[0].split(":")[1].split(";")[0];
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return new Blob([ab], { type: mimeString });
     };
 
-    // Convert the base64 data URL to a Blob object
     const handleImageLoad = () => {
       const dataURL = image.src;
       if (dataURL.startsWith("data:image/")) {

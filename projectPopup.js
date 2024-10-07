@@ -371,13 +371,18 @@ $(document).ready(function () {
   $("body").append(`
     <div class="custom-modal-overlay" style="display:none;">
       <div class="custom-modal">
-        <span class="close-modal-btn">&times;</span>
+        <span class="close-modal-btn"> 
+          <div class="close-button-line lineOne"></div>
+          <div class="close-button-line lineTwo"></div>
+        </span>
         <div class="modal-content">
           <img src="" alt="Project Image" class="modal-image"> <br>
           <div class="image-navigation">
-            <button class="prev-image"">&#10094; Previous</button>
+          <div class="modal-image-navigation">
+          <button class="prev-image""> Previous </button>
             <span class="image-counter">1 / 1</span>
-            <button class="next-image">Next &#10095;</button>
+            <button class="next-image">Next </button>
+          </div>
           </div>
           <div class="modal-title"></div>
           <div class="modal-description"></div>

@@ -70,7 +70,7 @@ $(document).ready(function () {
           transform: originalPositions[index].transform, // Back to original position
           opacity: 1, // Full opacity
           position: "static", // Ensure position is static to align to grid
-          transition: "all 0.5s ease", // Smooth transition
+          transition: "all 500ms ease", // Smooth transition
         });
       });
 
@@ -81,4 +81,34 @@ $(document).ready(function () {
 
   //make wetrospective div draggable
   $(".wetrospective").draggable();
+
+  $(".scramble").on("click", function () {
+    // Get the dimensions of the container
+    const containerWidth = projectsContainer.width();
+    const containerHeight = projectsContainer.height();
+
+    // Calculate the center of the container
+    const centerX = containerWidth / 2;
+    const centerY = containerHeight / 4;
+
+    // Define an offset range for the scrambling effect (you can adjust this)
+    const maxOffsetX = containerWidth * 0.25; // Limit X offset to 25% of container width
+    const maxOffsetY = containerHeight * 0.25; // Limit Y offset to 25% of container height
+
+    projects.each(function () {
+      // Calculate random offsets relative to the center
+      const randomX = Math.floor(Math.random() * maxOffsetX) - maxOffsetX * 2; // Center around the middle with +/- offset
+      const randomY = Math.floor(Math.random() * maxOffsetY) - maxOffsetY * 2; // Center around the middle with +/- offset
+      const randomZ = Math.floor(Math.random() * 10); // Random Z index within a range
+
+      // Apply new random transforms to each project, centered around the container's middle
+      $(this).css({
+        transform: `translate(${centerX + randomX}px, ${centerY + randomY}px)`, // Position relative to the center
+        zIndex: randomZ, // Random z-index
+      });
+    });
+
+    // Reset the animation flag to allow hover animation again if needed
+    animationTriggered = false;
+  });
 });

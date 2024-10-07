@@ -23,7 +23,7 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 
-a, .link{
+a, .link, .modal-extraInfo{
     color: blue;
     text-decoration: underline;
     text-decoration-color: blue;
@@ -38,6 +38,27 @@ a:hover, .link:hover{
 
 .link{
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.scramble{
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: magenta;
+    border: 1px solid magenta;
+    border-radius: 100px;
+    padding: 5px 10px;
+}
+
+button:hover{
+    background-color: magenta;
+    color: white;
     text-decoration: none;
 }
 
@@ -284,21 +305,88 @@ a:hover, .link:hover{
   /* Close button styling */
   .close-modal-btn {
     position: absolute;
+    width: 30px;
+    aspect-ratio: 1;
     top: 15px;
     right: 15px;
     font-size: 24px;
     cursor: pointer;    
     color: magenta;
-    border: 2px solid magenta;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    border: 1px solid magenta;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 100px;
     font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close-button-line{
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: magenta;
+  }
+
+  .lineOne{
+    transform: rotate(45deg);
+  }
+
+  .lineTwo{
+    transform: rotate(-45deg);
+  }
+
+  .close-modal-btn:hover{
+    background-color: magenta;
+    color: white;
+  }
+
+  .close-modal-btn:hover .close-button-line{
+    background-color: white;
+  }
+
+  .modal-title{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    width: 50%;
+    color: white;
+    margin-bottom: 20px;
+    border: 1px solid magenta;
+    background-color: magenta;
+    border-radius: 100px;
+    padding: 5px 10px;
+    animation: nameTiltRightLeft 5500ms infinite forwards;
+
+  }
+
+  .modal-description{
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .modal-extraInfo{
+    font-size: 1rem;
+    color: blue;
+    margin-bottom: 20px;
+  }
+
+  .modal-image-navigation{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
-  .modal-image{
-/* center the images */
+  .image-counter{
+    font-size: 1rem;
+    color: magenta;
+  }
 
+  .modal-image{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -367,6 +455,23 @@ a:hover, .link:hover{
     }
 }
 
+@keyframes nameTiltRightLeft{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(5deg);
+    }
+    15%{
+        transform: rotate(-5deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
 
 
 
