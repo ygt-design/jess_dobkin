@@ -3,50 +3,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   images.forEach((image) => {
     // Create a canvas and convert the image to a Blob object
-    const convertImageToBlob = (imgElement) => {
-      return new Promise((resolve, reject) => {
-        // Create a canvas element
-        const canvas = document.createElement("canvas");
-        canvas.width = imgElement.naturalWidth;
-        canvas.height = imgElement.naturalHeight;
-
-        // Draw the image onto the canvas
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(imgElement, 0, 0);
-
-        // Convert the canvas to a Blob
-        canvas.toBlob((blob) => {
-          if (blob) {
-            resolve(blob);
-          } else {
-            reject(new Error("Conversion to Blob failed"));
-          }
-        }, "image/jpeg"); // Adjust the MIME type as needed
-      });
+    const convertDataURLToBlob = (dataURL) => {
+      const byteString = atob(dataURL.split(",")[1]);
+      const mimeString = dataURL.split(",")[0].split(":")[1].split(";")[0];
+      const ab = new ArrayBuffer(byteString.length);
+      const ia = new Uint8Array(ab);
+      for (let i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+      }
+      return new Blob([ab], { type: mimeString });
     };
 
-    // Handle the image after it loads
-    image.addEventListener("load", () => {
-      convertImageToBlob(image)
-        .then((blob) => {
-          // Now we have the Blob object of the image
-          return imageCompression(blob, {
-            maxSizeMB: 2, // Max size in MB
-            maxWidthOrHeight: 1920, // Max width or height of the output image
-            useWebWorker: true, // Use web workers for better performance
+    // Convert the base64 data URL to a Blob object
+    const handleImageLoad = () => {
+      const dataURL = image.src;
+      if (dataURL.startsWith("data:image/")) {
+        const blob = convertDataURLToBlob(dataURL);
+
+        // Compress the Blob object
+        imageCompression(blob, {
+          maxSizeMB: 2, // Max size in MB
+          maxWidthOrHeight: 1920, // Max width or height of the output image
+          useWebWorker: true, // Use web workers for better performance
+        })
+          .then((compressedBlob) => {
+            // Convert the compressed Blob to a base64 data URL and set it as the image source
+            const reader = new FileReader();
+            reader.readAsDataURL(compressedBlob);
+            reader.onloadend = () => {
+              image.src = reader.result;
+            };
+          })
+          .catch((error) => {
+            console.error("Image compression error:", error);
           });
-        })
-        .then((compressedBlob) => {
-          // Read the compressed Blob and set it as the image source
-          const reader = new FileReader();
-          reader.readAsDataURL(compressedBlob);
-          reader.onloadend = () => {
-            image.src = reader.result;
-          };
-        })
-        .catch((error) => {
-          console.error("Image compression error:", error);
-        });
-    });
+      }
+    };
+
+    // Wait for the image to load before processing
+    image.addEventListener("load", handleImageLoad);
   });
 });
