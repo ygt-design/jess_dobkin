@@ -41,6 +41,10 @@ a:hover, .link:hover{
     text-decoration: none;
 }
 
+.righ-nav{
+    z-index: 99999;
+}
+
 .scramble{
     cursor: pointer;
 }
