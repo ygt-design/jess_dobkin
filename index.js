@@ -89,7 +89,7 @@ $(document).ready(function () {
     });
     projectsContainer.css({
       display: "grid",
-      "grid-template-columns": isMobile ? "1fr" : "1fr 1fr 1fr",
+      "grid-template-columns": isMobile ? "1fr 1fr" : "1fr 1fr 1fr",
       gap: "10px",
     });
 
