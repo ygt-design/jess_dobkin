@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  // Define the project data with multiple images for each project
   const projectContent = {
     "./assets/images/forWhatItsWorth/forWhatItsWorth_one.jpg": {
       title: "For What It's Worth",
@@ -390,12 +389,9 @@ $(document).ready(function () {
     </div>
   `);
 
-  // Click event for each project div
   $(".projects-container .project").on("click", function () {
-    // Get the image source of the clicked project
     let imgSrc = $(this).find("img").attr("src");
 
-    // Check if the project content exists for this image source
     const projectData = projectContent[imgSrc];
 
     if (!projectData) {
@@ -403,16 +399,12 @@ $(document).ready(function () {
       return;
     }
 
-    // Index to keep track of the currently displayed image in the gallery
     let currentIndex = 0;
 
-    // Set the modal content dynamically, starting with the first image
     updateModalContent(projectData, currentIndex);
 
-    // Show the modal with a fade-in effect
     $(".custom-modal-overlay").fadeIn(300);
 
-    // Event listener for Next button
     $(".next-image")
       .off("click")
       .on("click", function () {
@@ -422,7 +414,6 @@ $(document).ready(function () {
         }
       });
 
-    // Event listener for Previous button
     $(".prev-image")
       .off("click")
       .on("click", function () {
@@ -433,19 +424,16 @@ $(document).ready(function () {
       });
   });
 
-  // Close button event to hide the modal
   $(".close-modal-btn").on("click", function () {
     $(".custom-modal-overlay").fadeOut(300);
   });
 
-  // Click outside the modal content to close the modal
   $(".custom-modal-overlay").on("click", function (e) {
     if ($(e.target).hasClass("custom-modal-overlay")) {
       $(".custom-modal-overlay").fadeOut(300);
     }
   });
 
-  // Function to update the modal content dynamically
   function updateModalContent(projectData, index) {
     $(".modal-image").attr("src", projectData.imgSrc[index]);
     $(".modal-title").text(projectData.title);

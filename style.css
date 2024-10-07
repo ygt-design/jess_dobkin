@@ -114,7 +114,7 @@ button:hover{
     height: 100vh;
     overflow-y: scroll;
     position: relative;
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-y: auto; 
 }
 
 .loading-overlay{
@@ -247,8 +247,8 @@ button:hover{
     margin-bottom: 10px;
     margin-top: 40px;
     color: var(--title-color);
-    /* text-transform: uppercase; */
-    /* font-style: italic; */
+    
+    
     color: blue;
 }
 
@@ -276,23 +276,23 @@ button:hover{
     color: blue;
 }
 
-/* project styling starts here */
 
-/* Container and Grid Layout */
+
+
 .projects-wrapper {
-    padding: 30px; /* Added padding to the top */
+    padding: 30px; 
     height: 100vh;
     overflow-y: scroll;
-    position: relative; /* Make it a reference point for absolutely positioned elements */
+    position: relative; 
   }
   
   .projects-container {
     display: grid;
-    position: relative; /* Make it a reference point for absolutely positioned elements */
+    position: relative; 
     z-index: 0;
   }
   
-  /* Project Styling */
+  
   .project {
     position: absolute;
     width: 200px;
@@ -301,7 +301,7 @@ button:hover{
     transition: all 0.5s ease-in-out;
   }
   
-  /* Image Styling */
+  
   .project img {
     width: 100%;
     height: 100%;
@@ -315,7 +315,7 @@ button:hover{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    background: rgba(0, 0, 0, 0.7); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -333,7 +333,7 @@ button:hover{
     overflow-y: scroll;
   }
   
-  /* Close button styling */
+  
   .close-modal-btn {
     position: absolute;
     width: 30px;
@@ -459,7 +459,7 @@ button:hover{
 .wetrospective:hover .dragMe{
     opacity: 0;
 }
-/* Animations */
+
 
 @keyframes glitter-animation {
     0% {
@@ -510,11 +510,11 @@ button:hover{
 
 
 
-/* Media Queries */
+
 
 @media screen and (max-width: 1024px) {
     .projects-container {
-      grid-template-columns: 1fr 1fr; /* Tablet: 2 columns */
+      grid-template-columns: 1fr 1fr; 
     }
     .righ-nav{
         display: none;
@@ -532,7 +532,7 @@ button:hover{
     }
 
     .projects-container {
-        grid-template-columns: 1fr; /* Mobile: 1 column */
+        grid-template-columns: 1fr; 
       }
 
     .animated-arrow{
