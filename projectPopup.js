@@ -93,8 +93,7 @@ $(document).ready(function () {
       ],
     },
     "./assets/images/newStand/newStand_one.jpeg": {
-      title:
-        "How Many Performance Artists Does It Take To Change a Light Bulb (for Martha Wilson)",
+      title: "The Artist-Run Newsstand",
       description:
         "A collective of Toronto artists lease a vacant Gateway Newsstand kiosk at the Chester Subway Station, which had been sitting empty for more than six years, to reimagine this commercial space into an alternative newsstand and artists’ space. The newsstand — in operation for one year — commis-sions artist projects that speak to issues of transit, mobility, accessibil-ity, city life, and civic engagement, and address various questions about how news is disseminated and received in a time of rapidly changing technology. The news-stand brings together the work of writers, choreographers, media artists, performance artists, theatre artists, craftspeople, visual artists, and community arts organizers for site-speciﬁc exhibitions, screenings, performances, and community arts projects. The newsstand also sells snacks, beverages, artists’ books and multiples, zines, and independent magazines.",
       extraInfo: "Photo Credit: xx and Nathan Hoo",
@@ -104,8 +103,7 @@ $(document).ready(function () {
       ],
     },
     "./assets/images/mono/mono_one.jpeg": {
-      title:
-        "How Many Performance Artists Does It Take To Change a Light Bulb (for Martha Wilson)",
+      title: "MONOMYTHS",
       description:
         "Over the course of a year, a diverse collection of artists, scholars, and activists are invited to revise Joseph Campbell’s conception of the hero’s journey through performance art, lectures, workshops, and other oﬀerings. Presented by FADO Performance Art Centre, Toronto. Conceived and co-curated with Shannon Cochrane.",
       extraInfo: "Photo Credit: Henry Chan / Calendar Design: Lisa Kiss Design",

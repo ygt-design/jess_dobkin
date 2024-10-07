@@ -8,6 +8,10 @@
     -ms-overflow-style: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.01rem;
@@ -45,8 +49,17 @@ a:hover, .link:hover{
     z-index: 99999;
 }
 
-.scramble{
+.scramble, .tidyUp{
     cursor: pointer;
+    border: 1px solid blue;
+    padding: 5px 10px;
+    border-radius: 100px;
+    margin-bottom: 60px;
+}
+
+.scramble:hover, .tidyUp:hover{
+    background-color: blue;
+    color: white;
 }
 
 button{
@@ -66,9 +79,7 @@ button:hover{
     text-decoration: none;
 }
 
-.credits{
-    text-align: right;
-    width: 100%;
+.credits, .projects-scroll-click{
     text-decoration: underline;
     text-decoration-color: blue;
     text-decoration-thickness: 1px;
@@ -79,17 +90,31 @@ button:hover{
 .left-nav{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
+
+.left-menu{
+    width: 50%;
+    margin-left: auto;
+}
+
+.projects-scroll-click{
+    opacity: 0;
+}
+
 
 .right-nav{
     margin-bottom: 100px;
+    z-index: 999999999;
+    background-color: magenta;
 }
 
 .info{
     padding: 30px 30px;
     height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
     position: relative;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .loading-overlay{
@@ -172,6 +197,8 @@ button:hover{
     background-color: magenta;
     position: fixed;
     z-index: 999;
+    left: 30px;
+    top: 30px;
 }
 
 .name:hover{
@@ -253,25 +280,25 @@ button:hover{
 
 /* Container and Grid Layout */
 .projects-wrapper {
-    padding: 30px 30px;
+    padding: 30px; /* Added padding to the top */
     height: 100vh;
     overflow-y: scroll;
+    position: relative; /* Make it a reference point for absolutely positioned elements */
   }
   
   .projects-container {
-    padding-top: 100px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
     position: relative; /* Make it a reference point for absolutely positioned elements */
+    z-index: 0;
   }
   
   /* Project Styling */
   .project {
-    position: absolute; 
+    position: absolute;
+    width: 200px;
     aspect-ratio: 0.8;
     cursor: pointer;
-    transition: all 0.5s ease-in-out; 
+    transition: all 0.5s ease-in-out;
   }
   
   /* Image Styling */
@@ -370,6 +397,7 @@ button:hover{
     font-size: 1rem;
     color: black;
     margin-bottom: 20px;
+    line-height: 1.5rem;
   }
 
   .modal-extraInfo{
@@ -484,6 +512,15 @@ button:hover{
 
 /* Media Queries */
 
+@media screen and (max-width: 1024px) {
+    .projects-container {
+      grid-template-columns: 1fr 1fr; /* Tablet: 2 columns */
+    }
+    .righ-nav{
+        display: none;
+    }
+  }
+
 @media screen and (max-width: 768px){
     .container{
         grid-template-columns: 1fr;
@@ -494,11 +531,31 @@ button:hover{
         height: auto;
     }
 
-    .projects-container{
-        grid-template-columns: 1fr 1fr;
-    }
+    .projects-container {
+        grid-template-columns: 1fr; /* Mobile: 1 column */
+      }
 
     .animated-arrow{
         display: none;
+    }
+
+    .modal-title{
+        font-size: 1.2rem;
+        padding: 15px 25px;
+        width: 100%;
+    }
+
+    .modal-description{
+        font-size: 0.9rem;
+        color: black;
+        line-height: 1.25rem;
+    }
+
+    .righ-nav{
+        display: none;
+    }
+
+    .projects-scroll-click{
+        opacity: 1;
     }
 }
