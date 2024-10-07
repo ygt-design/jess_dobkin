@@ -27,15 +27,16 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 
-a, .link, .modal-extraInfo{
+a, .link, .modal-extraInfo, .event-title{
     color: blue;
     text-decoration: underline;
     text-decoration-color: blue;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+    cursor: pointer;
 }
 
-a:hover, .link:hover{
+a:hover, .link:hover, .event-title:hover{
     color: magenta;
     text-decoration-color: magenta;
 }

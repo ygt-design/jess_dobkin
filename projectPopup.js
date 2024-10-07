@@ -374,12 +374,10 @@ $(document).ready(function () {
         </span>
         <div class="modal-content">
           <img src="" alt="Project Image" class="modal-image"> <br>
-          <div class="image-navigation">
           <div class="modal-image-navigation">
-          <button class="prev-image""> Previous </button>
+            <button class="prev-image"> Previous </button>
             <span class="image-counter">1 / 1</span>
             <button class="next-image">Next </button>
-          </div>
           </div>
           <div class="modal-title"></div>
           <div class="modal-description"></div>
@@ -389,22 +387,15 @@ $(document).ready(function () {
     </div>
   `);
 
-  $(".projects-container .project").on("click", function () {
-    let imgSrc = $(this).find("img").attr("src");
-
-    const projectData = projectContent[imgSrc];
-
-    if (!projectData) {
-      console.error("No content found for the image source:", imgSrc);
-      return;
-    }
-
+  // Function to show modal and populate content based on project data
+  function showProjectModal(projectData) {
     let currentIndex = 0;
 
     updateModalContent(projectData, currentIndex);
 
     $(".custom-modal-overlay").fadeIn(300);
 
+    // Handle image navigation
     $(".next-image")
       .off("click")
       .on("click", function () {
@@ -422,23 +413,88 @@ $(document).ready(function () {
           updateModalContent(projectData, currentIndex);
         }
       });
+  }
+
+  // Event handler for clicking on event titles
+  $(document).on("click", ".event-title", function () {
+    const projectTitle = $(this).text().trim(); // Get the text of the event title
+
+    const projectData = projectContent[projectTitle];
+
+    if (!projectData) {
+      console.error("No content found for project title:", projectTitle);
+      return;
+    }
+
+    showProjectModal(projectData); // Show the modal with the corresponding project data
   });
 
+  // Event handler for clicking on project images
+  $(document).on("click", ".projects-container .project", function () {
+    const imgSrc = $(this).find("img").attr("src");
+
+    // Search through the projectContent object to find the project by imgSrc
+    const projectData = Object.values(projectContent).find((project) =>
+      project.imgSrc.includes(imgSrc)
+    );
+
+    if (!projectData) {
+      console.error("No content found for image source:", imgSrc);
+      return;
+    }
+
+    showProjectModal(projectData); // Show the modal with the corresponding project data
+  });
+
+  // Close modal on close button click
   $(".close-modal-btn").on("click", function () {
     $(".custom-modal-overlay").fadeOut(300);
   });
 
+  // Close modal when clicking outside the modal content
   $(".custom-modal-overlay").on("click", function (e) {
     if ($(e.target).hasClass("custom-modal-overlay")) {
       $(".custom-modal-overlay").fadeOut(300);
     }
   });
 
+  // Function to update modal content based on the project data and image index
   function updateModalContent(projectData, index) {
     $(".modal-image").attr("src", projectData.imgSrc[index]);
     $(".modal-title").text(projectData.title);
     $(".modal-description").text(projectData.description);
-    $(".modal-extraInfo").text(projectData.extraInfo);
+    $(".modal-extraInfo").text(projectData.extraInfo || "");
     $(".image-counter").text(`${index + 1} / ${projectData.imgSrc.length}`);
   }
+
+  // Load the events from the JSON data and render them dynamically
+  $.getJSON("./full_events_data.json", function (data) {
+    data.years.reverse().forEach(function (yearObj) {
+      let yearContainer = $("<div>").addClass("year-container");
+
+      let yearTitle = $("<div>").addClass("year-title").text(yearObj.year);
+      yearContainer.append(yearTitle);
+
+      let eventsWrapper = $("<div>").addClass("events-wrapper");
+
+      yearObj.events.forEach(function (eventObj) {
+        let eventContainer = $("<div>").addClass("event-container");
+
+        let eventTitle = $("<div>")
+          .addClass("event-title")
+          .text(eventObj.title);
+        eventContainer.append(eventTitle);
+
+        let eventDescription = $("<div>")
+          .addClass("event-description")
+          .text(eventObj.description);
+        eventContainer.append(eventDescription);
+
+        eventsWrapper.append(eventContainer);
+      });
+      yearContainer.append(eventsWrapper);
+
+      $(".previously-container").append(yearContainer);
+    });
+  });
 });
