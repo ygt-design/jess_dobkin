@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Compress the Blob object
         imageCompression(blob, {
-          maxSizeMB: 2, // Max size in MB
+          maxSizeMB: 0.5, // Max size in MB
           maxWidthOrHeight: 1920, // Max width or height of the output image
           useWebWorker: true, // Use web workers for better performance
         })
