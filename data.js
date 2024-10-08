@@ -1,4 +1,7 @@
 $.getJSON("./full_events_data.json", function (data) {
+  // Clear the container before appending new content
+  $(".previously-container").empty();
+
   data.years.reverse().forEach(function (yearObj) {
     let yearContainer = $("<div>").addClass("year-container");
 
