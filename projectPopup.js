@@ -20,7 +20,7 @@ $(document).ready(function () {
       imgSrc: ["./assets/images/holdingCoburn/holding_colburn.jpeg"],
     },
     "./assets/images/dinnerPartySeries/dinnerParty.jpeg": {
-      title: "Dinner Party Series ",
+      title: "Dinner Party Series",
       description:
         "A series of online dinner parties for artists, academics, archivists, and activists to gather across borders, languages, time zones, and cultures for sensory, intimate connection in pandemic times. A collaboration with Joyce LeeAnn Joseph and Shalon T. Webber-Heﬀernan.",
       imgSrc: ["./assets/images/dinnerPartySeries/dinnerParty.jpeg"],
@@ -419,7 +419,10 @@ $(document).ready(function () {
   $(document).on("click", ".event-title", function () {
     const projectTitle = $(this).text().trim(); // Get the text of the event title
 
-    const projectData = projectContent[projectTitle];
+    // Find the matching project by title in the projectContent object
+    const projectData = Object.values(projectContent).find(
+      (project) => project.title === projectTitle
+    );
 
     if (!projectData) {
       console.error("No content found for project title:", projectTitle);
