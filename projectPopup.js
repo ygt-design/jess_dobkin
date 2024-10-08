@@ -387,7 +387,6 @@ $(document).ready(function () {
     </div>
   `);
 
-  // Function to show modal and populate content based on project data
   function showProjectModal(projectData) {
     let currentIndex = 0;
 
@@ -395,7 +394,6 @@ $(document).ready(function () {
 
     $(".custom-modal-overlay").fadeIn(300);
 
-    // Handle image navigation
     $(".next-image")
       .off("click")
       .on("click", function () {
@@ -415,11 +413,9 @@ $(document).ready(function () {
       });
   }
 
-  // Event handler for clicking on event titles
   $(document).on("click", ".event-title", function () {
-    const projectTitle = $(this).text().trim(); // Get the text of the event title
+    const projectTitle = $(this).text().trim();
 
-    // Find the matching project by title in the projectContent object
     const projectData = Object.values(projectContent).find(
       (project) => project.title === projectTitle
     );
@@ -429,14 +425,12 @@ $(document).ready(function () {
       return;
     }
 
-    showProjectModal(projectData); // Show the modal with the corresponding project data
+    showProjectModal(projectData);
   });
 
-  // Event handler for clicking on project images
   $(document).on("click", ".projects-container .project", function () {
     const imgSrc = $(this).find("img").attr("src");
 
-    // Search through the projectContent object to find the project by imgSrc
     const projectData = Object.values(projectContent).find((project) =>
       project.imgSrc.includes(imgSrc)
     );
@@ -446,22 +440,19 @@ $(document).ready(function () {
       return;
     }
 
-    showProjectModal(projectData); // Show the modal with the corresponding project data
+    showProjectModal(projectData);
   });
 
-  // Close modal on close button click
   $(".close-modal-btn").on("click", function () {
     $(".custom-modal-overlay").fadeOut(300);
   });
 
-  // Close modal when clicking outside the modal content
   $(".custom-modal-overlay").on("click", function (e) {
     if ($(e.target).hasClass("custom-modal-overlay")) {
       $(".custom-modal-overlay").fadeOut(300);
     }
   });
 
-  // Function to update modal content based on the project data and image index
   function updateModalContent(projectData, index) {
     $(".modal-image").attr("src", projectData.imgSrc[index]);
     $(".modal-title").text(projectData.title);
