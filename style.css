@@ -492,6 +492,7 @@ button:hover {
 
 .wet-modal{
     object-fit: cover;
+    height: 90vh;
 }
 
 .wet-modal img{

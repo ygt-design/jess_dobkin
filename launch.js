@@ -8,9 +8,7 @@ $(document).ready(function () {
                   <div class="close-button-line lineOne"></div>
                   <div class="close-button-line lineTwo"></div>
                 </div>
-                <div class="wet-modal">
-                    <img src="./assets/images/launch_evite_edit.jpg">
-                </div>
+                <embed src="./assets/images/launch_evite.pdf#toolbar=0" width="100%" border="0" height="600px" type="application/pdf">
               </div>
             </div>
           `;
@@ -40,48 +38,4 @@ $(document).ready(function () {
     // Start bouncing images
     bounceImages();
   });
-
-  function bounceImages() {
-    const $images = $(".bounce-img");
-    const speed = 1.2; // Adjust the speed as needed
-
-    $images.each(function () {
-      let img = $(this);
-      let position = {
-        top: Math.random() * 200, // Random starting position for top
-        left: Math.random() * 200, // Random starting position for left
-        dx: Math.random() < 0.5 ? speed : -speed, // Random horizontal direction
-        dy: Math.random() < 0.5 ? speed : -speed, // Random vertical direction
-      };
-
-      img.css({ top: position.top, left: position.left, position: "absolute" });
-
-      // Move the image
-      function moveImage() {
-        let parentWidth = $(".credit-logos").width();
-        let parentHeight = $(".credit-logos").height();
-        let imgWidth = img.width();
-        let imgHeight = img.height();
-
-        position.left += position.dx;
-        position.top += position.dy;
-
-        // Bounce off the left and right walls
-        if (position.left <= 0 || position.left + imgWidth >= parentWidth) {
-          position.dx = -position.dx; // Reverse direction
-        }
-
-        // Bounce off the top and bottom walls
-        if (position.top <= 0 || position.top + imgHeight >= parentHeight) {
-          position.dy = -position.dy; // Reverse direction
-        }
-
-        img.css({ top: position.top, left: position.left });
-
-        requestAnimationFrame(moveImage); // Continuously animate
-      }
-
-      moveImage();
-    });
-  }
 });
