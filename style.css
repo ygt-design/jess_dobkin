@@ -396,6 +396,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
 .close-button-line {
@@ -486,7 +487,18 @@ button:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    cursor: grab;
+    cursor: pointer;
+}
+
+.wet-modal{
+    object-fit: cover;
+}
+
+.wet-modal img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
 }
 
 
