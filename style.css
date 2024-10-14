@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,26 +8,29 @@
     -ms-overflow-style: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.01rem;
 }
 
-:root{
+:root {
     --title-color: #000000;
 }
 
-.container{
+.container {
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-a, .link, .modal-extraInfo, .event-title{
+a,
+.link,
+.modal-extraInfo,
+.event-title {
     color: blue;
     text-decoration: underline;
     text-decoration-color: blue;
@@ -36,21 +39,24 @@ a, .link, .modal-extraInfo, .event-title{
     cursor: pointer;
 }
 
-a:hover, .link:hover, .event-title:hover{
+a:hover,
+.link:hover,
+.event-title:hover {
     color: magenta;
     text-decoration-color: magenta;
 }
 
-.link{
+.link {
     text-transform: uppercase;
     text-decoration: none;
 }
 
-.righ-nav{
+.righ-nav {
     z-index: 99999;
 }
 
-.scramble, .tidyUp{
+.scramble,
+.tidyUp {
     cursor: pointer;
     border: 1px solid blue;
     padding: 5px 10px;
@@ -58,12 +64,13 @@ a:hover, .link:hover, .event-title:hover{
     margin-bottom: 60px;
 }
 
-.scramble:hover, .tidyUp:hover{
+.scramble:hover,
+.tidyUp:hover {
     background-color: blue;
     color: white;
 }
 
-button{
+button {
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -74,13 +81,14 @@ button{
     padding: 5px 10px;
 }
 
-button:hover{
+button:hover {
     background-color: magenta;
     color: white;
     text-decoration: none;
 }
 
-.credits, .projects-scroll-click{
+.credits,
+.projects-scroll-click {
     text-decoration: underline;
     text-decoration-color: blue;
     text-decoration-thickness: 1px;
@@ -88,37 +96,37 @@ button:hover{
     cursor: pointer;
 }
 
-.left-nav{
+.left-nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.left-menu{
+.left-menu {
     width: 50%;
     margin-left: auto;
 }
 
-.projects-scroll-click{
+.projects-scroll-click {
     opacity: 0;
 }
 
 
-.right-nav{
+.right-nav {
     margin-bottom: 100px;
     z-index: 999999999;
     background-color: magenta;
 }
 
-.info{
+.info {
     padding: 30px 30px;
     height: 100vh;
     overflow-y: scroll;
     position: relative;
-  overflow-y: auto; 
+    overflow-y: auto;
 }
 
-.loading-overlay{
+.loading-overlay {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -132,23 +140,26 @@ button:hover{
     animation: opacityDrop 500ms forwards;
 }
 
-.loading-hand{
+.loading-hand {
     display: none;
     animation: spin 1s infinite;
 }
 
-@keyframes opacityDrop{
-    0%{
+@keyframes opacityDrop {
+    0% {
         opacity: 1;
     }
-    90%{
+
+    90% {
         opacity: 0;
     }
-    95%{
+
+    95% {
         opacity: 0;
         transform: translateY(0);
     }
-    100%{
+
+    100% {
         transform: translateY(-100vh);
         opacity: 0;
     }
@@ -158,12 +169,13 @@ button:hover{
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
-.animated-arrow{
+.animated-arrow {
     position: fixed;
     color: blue;
     bottom: 3%;
@@ -177,21 +189,23 @@ button:hover{
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
-.name{
+.name {
     margin-bottom: 20px;
     text-transform: uppercase;
     font-size: 1rem;
     animation: nameTiltRightLeft 5000ms infinite forwards;
     color: white;
-    border: 1px solid magenta;  
+    border: 1px solid magenta;
     border-radius: 100px;
     padding: 5px 10px;
     cursor: pointer;
@@ -202,12 +216,12 @@ button:hover{
     top: 30px;
 }
 
-.name:hover{
+.name:hover {
     background-color: white;
     color: magenta;
 }
 
-.make-is-now{
+.make-is-now {
     background-color: magenta;
     padding: 2px 10px;
     color: white;
@@ -216,114 +230,146 @@ button:hover{
     border: 1px solid magenta;
 }
 
-.make-is-now:hover{
+.make-is-now:hover {
     background-color: white;
     color: magenta;
     text-decoration-color: magenta;
 }
 
-@keyframes nameTiltRightLeft{
-    0%{
+@keyframes nameTiltRightLeft {
+    0% {
         transform: rotate(0deg);
     }
-    10%{
+
+    10% {
         transform: rotate(5deg);
     }
-    15%{
+
+    15% {
         transform: rotate(-5deg);
     }
-    25%{
+
+    25% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
 
-.contact a{
+.contact a {
     color: black;
 }
 
-.section-tite{ 
+.section-tite {
     margin-bottom: 10px;
     margin-top: 40px;
     color: var(--title-color);
-    
-    
+
+
     color: blue;
 }
 
-.text, .event-description{
+.text,
+.event-description {
     line-height: 1.5rem;
     font-size: 1rem;
 }
 
-.year-container{
+.year-container {
     display: flex;
     gap: 50px;
 }
 
-.event-container{
+.event-container {
     margin-bottom: 30px;
 }
 
-.event-title{
+.event-title {
     margin-bottom: 5px;
     color: blue;
 }
 
-.year-title{
+.year-title {
     font-size: 1rem;
     color: blue;
 }
 
+.custom-modal .credit-logos {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Adjust the height as needed */
+    overflow: hidden; /* Make sure the images don’t overflow outside */
+  }
+  .bounce-img {
+    position: absolute;
+    width: 40%; /* Adjust size if needed */
+    height: auto;
+    mix-blend-mode: multiply;
+  }
 
+  .yigit-credit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    width: 50%;
+    box-shadow: 0px 0px 16px rgba(255, 0, 255, 0.5);
+  }
 
 
 .projects-wrapper {
-    padding: 30px; 
+    padding: 30px;
     height: 100vh;
     overflow-y: scroll;
-    position: relative; 
-  }
-  
-  .projects-container {
+    position: relative;
+}
+
+.projects-container {
     display: grid;
-    position: relative; 
+    position: relative;
     z-index: 0;
-  }
-  
-  
-  .project {
+}
+
+
+.project {
     position: absolute;
     width: 200px;
     aspect-ratio: 0.8;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
-  }
-  
-  
-  .project img {
+}
+
+
+.project img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  
-.custom-modal-overlay {
+
+
+
+.custom-modal-overlay,
+.custom-modal-overlay-two {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7); 
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1001;
-  }
-  
-  .custom-modal {
+}
+
+.custom-modal {
     background: #fff;
     padding: 30px;
     width: 90vw;
@@ -332,17 +378,17 @@ button:hover{
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     max-height: 90vh;
     overflow-y: scroll;
-  }
-  
-  
-  .close-modal-btn {
+}
+
+
+.close-modal-btn {
     position: absolute;
     width: 30px;
     aspect-ratio: 1;
     top: 15px;
     right: 15px;
     font-size: 24px;
-    cursor: pointer;    
+    cursor: pointer;
     color: magenta;
     border: 1px solid magenta;
     padding-left: 5px;
@@ -352,83 +398,83 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .close-button-line{
+.close-button-line {
     position: absolute;
     width: 50%;
     height: 1px;
     background-color: magenta;
-  }
+}
 
-  .lineOne{
+.lineOne {
     transform: rotate(45deg);
-  }
+}
 
-  .lineTwo{
+.lineTwo {
     transform: rotate(-45deg);
-  }
+}
 
-  .close-modal-btn:hover{
+.close-modal-btn:hover {
     background-color: magenta;
     color: white;
-  }
+}
 
-  .close-modal-btn:hover .close-button-line{
+.close-modal-btn:hover .close-button-line {
     background-color: white;
-  }
+}
 
-  .modal-title{
+.modal-title {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.5rem;
-    width: 50%;
+    width: 65%;
     color: white;
     margin-bottom: 20px;
     border: 1px solid magenta;
     background-color: magenta;
     border-radius: 100px;
-    padding: 5px 10px;
+    padding: 20px 15px;
     animation: nameTiltRightLeft 5500ms infinite forwards;
 
-  }
+}
 
-  .modal-description{
+.modal-description {
     font-size: 1rem;
     color: black;
     margin-bottom: 20px;
     line-height: 1.5rem;
-  }
+}
 
-  .modal-extraInfo{
+.modal-extraInfo {
     font-size: 1rem;
     color: blue;
     margin-bottom: 20px;
-  }
+}
 
-  .modal-image-navigation{
+.modal-image-navigation {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-  
-  .image-counter{
+}
+
+.image-counter {
     font-size: 1rem;
     color: magenta;
-  }
+}
 
-  .modal-image{
+.modal-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
 
     width: 80%;
     height: auto;
-  }
+}
 
-.wetrospective{
+.wetrospective {
     position: fixed;
     width: 200px;
     height: 250px;
@@ -446,7 +492,7 @@ button:hover{
 }
 
 
-.dragMe{
+.dragMe {
     margin-top: -20px;
     background-color: magenta;
     color: white;
@@ -455,7 +501,7 @@ button:hover{
 
 
 
-.wetrospective:hover .dragMe{
+.wetrospective:hover .dragMe {
     opacity: 0;
 }
 
@@ -465,41 +511,49 @@ button:hover{
         transform: scale(1);
         opacity: 1;
     }
+
     100% {
         transform: scale(0.5);
         opacity: 0;
     }
 }
 
-@keyframes tiltRightTiltLeft{
-    0%{
+@keyframes tiltRightTiltLeft {
+    0% {
         transform: rotate(0deg);
     }
-    50%{
+
+    50% {
         transform: rotate(5deg);
     }
-    75%{
+
+    75% {
         transform: rotate(-5deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
 
-@keyframes nameTiltRightLeft{
-    0%{
+@keyframes nameTiltRightLeft {
+    0% {
         transform: rotate(0deg);
     }
-    10%{
+
+    10% {
         transform: rotate(5deg);
     }
-    15%{
+
+    15% {
         transform: rotate(-5deg);
     }
-    25%{
+
+    25% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
@@ -513,52 +567,54 @@ button:hover{
 
 @media screen and (max-width: 1024px) {
     .projects-container {
-      grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
     }
-    .righ-nav{
+
+    .righ-nav {
         display: none;
     }
-  }
+}
 
-@media screen and (max-width: 768px){
-    .container{
+@media screen and (max-width: 768px) {
+    .container {
         grid-template-columns: 1fr;
     }
 
-    .info, .projects-wrapper{
+    .info,
+    .projects-wrapper {
         overflow-y: auto;
         height: auto;
     }
 
     .projects-container {
-        grid-template-columns: 1fr; 
-      }
+        grid-template-columns: 1fr;
+    }
 
-    .animated-arrow{
+    .animated-arrow {
         display: none;
     }
 
-    .modal-title{
+    .modal-title {
         font-size: 1.2rem;
         padding: 15px 25px;
         width: 100%;
     }
 
-    .modal-description{
+    .modal-description {
         font-size: 0.9rem;
         color: black;
         line-height: 1.25rem;
     }
 
-    .righ-nav{
+    .righ-nav {
         display: none;
     }
 
-    .projects-scroll-click{
+    .projects-scroll-click {
         opacity: 1;
     }
 
-    .wetrospective{
+    .wetrospective {
         width: 110px;
         height: 150px;
     }
