@@ -363,6 +363,19 @@ $(document).ready(function () {
         "./assets/images/utopia/utopia_two.jpeg",
       ],
     },
+    "./assets/images/eatOut/eatOut.jpeg": {
+      title: "Eat Out: A Lesbian Dinner Theatre Extravaganza",
+      description:
+        "An evening-length performance extravaganza and four-course gourmet dinner featuring larger-than-life puppets and a live cunt- eating contest for dessert at the WOW Café Theater, New York City.",
+      extraInfo: "Photo Credit: Vivian Babuts",
+      imgSrc: ["./assets/images/eatOut/eatOut.jpeg"],
+    },
+    "./assets/images/highTide/highTide.jpeg": {
+      title: "High Tide",
+      description: "Jess’s ﬁrst one-person show at Oberlin College.",
+      extraInfo: "Photo Credit: Vivian Babuts",
+      imgSrc: ["./assets/images/highTide/highTide.jpeg"],
+    },
   };
 
   $("body").append(`
