@@ -8,7 +8,9 @@ $(document).ready(function () {
                   <div class="close-button-line lineOne"></div>
                   <div class="close-button-line lineTwo"></div>
                 </div>
-                <embed src="./assets/images/launch_evite.pdf#toolbar=0" width="100%" border="0" height="600px" type="application/pdf">
+                <iframe src="./assets/images/launch_evite.pdf#toolbar=0" id="iframeTou" style="width: 100%; height: 600px;">
+                    <p>It appears your web browser doesn't support iframes.</p>
+                </iframe>
               </div>
             </div>
           `;
