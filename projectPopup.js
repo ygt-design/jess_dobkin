@@ -310,7 +310,7 @@ $(document).ready(function () {
       imgSrc: ["./assets/images/ontario/ontario_one.jpeg"],
     },
     "./assets/images/sixDegrees/sixDegrees_one.jpg": {
-      title: "An Ontario Bride Seeks American Wives",
+      title: "Six Degrees of Lesbian Nation",
       description:
         "A meditation on the inescapable web of lesbian community, this one-woman puppet work humour-ously maps our interconnected lives.",
       extraInfo: "Image credit: Sandra Smith",
