@@ -269,7 +269,7 @@ $(document).ready(function () {
       ],
     },
     "./assets/images/bookWorm/bookWorm_one.jpeg": {
-      title: "Restored",
+      title: "The Bookworm",
       description:
         "Subversive bookmarks are planted in books on the shelves at mega-bookstores, educating consumers about the troubling business practices of megastores and encouraging them to patronize independent booksellers. Four bookmarks were designed for this action, each one tailored for use in a particular kind of book.",
       extraInfo: "Bookmark design by Sandra Smith.",
