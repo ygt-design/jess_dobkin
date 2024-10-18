@@ -208,7 +208,7 @@ $(document).ready(function () {
       imgSrc: ["./assets/images/mirror/mirror_one.jpeg"],
     },
     "./assets/images/clown/clown_one.jpeg": {
-      title: "Power Balls",
+      title: "Clown Car",
       description:
         "A novel interpretation of the traditional circus clown car.",
       extraInfo: "Photo Credit: David Hawe",
