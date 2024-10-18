@@ -41,7 +41,7 @@ $(document).ready(function () {
       ],
     },
     "./assets/images/talixmx/talixmx_one.jpeg": {
-      title: "TALIXMXN ",
+      title: "TALIXMXN",
       description:
         "A series of performances (2018–2019) that invites audiences to gather, assemble, and activate archival materials energetically connected to past and ongoing performances. Iterations of this performance engage the archive of the Hemi-spheric Institute of Performance and Politics, New York City, in collaboration with Jehan Roberson; the Hemispheric Institute’s Encuentro, Mexico City, in collaboration with Laura Levin; and the energetic archive of performances by Shawna Dempsey and Lorri Millan, whose perform-ance archive was lost in a ware-house ﬁre, presented by FADO Performance Art Centre, Toronto.",
       imgSrc: [
