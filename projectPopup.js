@@ -151,7 +151,7 @@ $(document).ready(function () {
       imgSrc: ["./assets/images/affirmations/affirmations_one.jpeg"],
     },
     "./assets/images/flowers/flowers_one.jpeg": {
-      title: "Affirmations for Artists",
+      title: "Flowers",
       description:
         "This performance reimagines Barbra Streisand and Neil Diamond’s hit duet, ‘You Don’t Bring Me Flowers’. First performed in 2010 for a 7A*11D International Performance Art Festival fundraiser, it was staged again in 2011 at Buddies in Bad Times Theatre where it was ﬁlmed by seventeen documenters using cell phones. The footage was then edited into a short ﬁlm by Jess Dobkin and Stev’nn Hall.",
       extraInfo: "Photo Credit: Tania Anderson",
