@@ -200,7 +200,7 @@ $(document).ready(function () {
       imgSrc: ["./assets/images/power/power_one.jpeg"],
     },
     "./assets/images/mirror/mirror_one.jpeg": {
-      title: "Power Balls",
+      title: "Mirror Ball",
       description:
         "Jess performs as a functional human mirror ball, exploring physical and psychological vulnerabilities, limitations, and boundaries.",
       extraInfo:
