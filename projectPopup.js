@@ -253,7 +253,7 @@ $(document).ready(function () {
       ],
     },
     "./assets/images/imagined/imagined_one.jpeg": {
-      title: "Ear Piece",
+      title: "Imagined Family Portraits",
       description:
         "The artist’s ear pokes through a wall in the Walter Phillips Gallery, Banﬀ Centre for Arts and Creativity. She communicates with visitors by writing notes projected on the opposite wall.",
       imgSrc: ["./assets/images/imagined/imagined_one.jpeg"],
@@ -314,7 +314,7 @@ $(document).ready(function () {
       description:
         "A meditation on the inescapable web of lesbian community, this one-woman puppet work humour-ously maps our interconnected lives.",
       extraInfo: "Image credit: Sandra Smith",
-      imgSrc: ["./assets/images/ontario/ontario_one.jpeg"],
+      imgSrc: ["./assets/images/sixDegrees/sixDegrees_one.jpg"],
     },
     "./assets/images/twoBoobs/twoBoobs_one.jpeg": {
       title: "The Two Boobs",
