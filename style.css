@@ -518,11 +518,20 @@ button:hover {
 .contact-wrapper {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin-top: 20px;
+    width: 100vw;
+    gap: 50px;
+}
+.contact-link{
     animation: tiltRightTiltLeft 1200ms infinite forwards;
+}
+
+.contact-hand{
+    position: relative;
+    right: auto;
+    bottom: auto;
 }
 
 @keyframes glitter-animation {
@@ -611,6 +620,10 @@ button:hover {
 
     .animated-arrow {
         display: none;
+    }
+
+    .contact-hand{
+        display: block;
     }
 
     .modal-title {
