@@ -8,7 +8,7 @@ $(document).ready(function () {
                   <div class="close-button-line lineOne"></div>
                   <div class="close-button-line lineTwo"></div>
                 </div>
-                <iframe src="./assets/images/launch_evite.pdf#toolbar=0" id="iframeTou" style="width: 100%; height: 600px;">
+                <iframe src="./assets/images/NYC_wetro_launch.pdf" id="iframeTou" style="width: 100%; height: 600px;">
                     <p>It appears your web browser doesn't support iframes.</p>
                 </iframe>
               </div>
